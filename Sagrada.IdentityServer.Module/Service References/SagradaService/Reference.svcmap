@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="2ef6d888-3ca4-4b11-8bc8-b1373abd0e9e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>true</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:1286/Services/Identity/IdentityUserService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="IdentityUserService.xsd" MetadataType="Schema" ID="f6ef69ec-d71f-4fc4-960a-fdfa64573846" SourceId="1" SourceUrl="http://localhost:1286/Services/Identity/IdentityUserService.svc?xsd=xsd0" />
+    <MetadataFile FileName="IdentityUserService1.xsd" MetadataType="Schema" ID="0da67052-e3d3-4931-96c2-f5c7a8491508" SourceId="1" SourceUrl="http://localhost:1286/Services/Identity/IdentityUserService.svc?xsd=xsd2" />
+    <MetadataFile FileName="IdentityUserService2.xsd" MetadataType="Schema" ID="b74a94fd-de01-4650-9dc1-877043072181" SourceId="1" SourceUrl="http://localhost:1286/Services/Identity/IdentityUserService.svc?xsd=xsd1" />
+    <MetadataFile FileName="IdentityUserService.disco" MetadataType="Disco" ID="24ac8045-3a52-480d-9997-0f836ce71d61" SourceId="1" SourceUrl="http://localhost:1286/Services/Identity/IdentityUserService.svc?disco" />
+    <MetadataFile FileName="IdentityUserService3.xsd" MetadataType="Schema" ID="44edcc51-f204-4fee-9b0d-c33f7675a27e" SourceId="1" SourceUrl="http://localhost:1286/Services/Identity/IdentityUserService.svc?xsd=xsd3" />
+    <MetadataFile FileName="IdentityUserService.wsdl" MetadataType="Wsdl" ID="258386bf-5761-4907-8228-21ea56fffda0" SourceId="1" SourceUrl="http://localhost:1286/Services/Identity/IdentityUserService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

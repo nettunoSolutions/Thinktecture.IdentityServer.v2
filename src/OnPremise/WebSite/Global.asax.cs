@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.Composition;
+﻿using Sagrada.IdentityServer.Module;
+using System.ComponentModel.Composition;
 using System.ComponentModel.Composition.Hosting;
 using System.Data.Entity;
 using System.Security.Claims;
@@ -41,12 +42,17 @@ namespace Thinktecture.IdentityServer.Web
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters, ConfigurationRepository);
             RouteConfig.RegisterRoutes(RouteTable.Routes, ConfigurationRepository, UserRepository);
             ProtocolConfig.RegisterProtocols(GlobalConfiguration.Configuration, RouteTable.Routes, ConfigurationRepository, UserRepository, RelyingPartyRepository);
+
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
 
         private void SetupCompositionContainer()
         {
-            Container.Current = new CompositionContainer(new RepositoryExportProvider());
+            Container.Current = new CompositionContainer(
+               new ExportProvider[] { 
+                                    new RepositoryExportProvider(), 
+                                    new SagradaExportProvider() 
+                                    });
         }
     }
 }

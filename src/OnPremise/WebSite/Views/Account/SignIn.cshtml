@@ -19,21 +19,48 @@
     @Html.ValidationSummary(true, SignIn_cshtml.SignInWasUnsuccessful)
     <fieldset class="editor small signin">
         <legend>@SignIn_cshtml.Login</legend>
-        <div>
-            @Html.LabelFor(m => m.UserName)
-            @Html.TextBoxFor(m => m.UserName)
-            @Html.ValidationMessageFor(m => m.UserName)
-        </div>
+       
+    
+            
+        @if (Model.IsPreAutenticated)
+        {
+            @Html.Hidden("UserName", Model.UserName)
+            @Html.Hidden("IsPreAutenticated", Model.IsPreAutenticated)
+
+            <div>
+                @Html.LabelFor(x => x.Companies)
+                @Html.DropDownListFor(x => x.Company.Value, Model.Companies)
+            </div>
+        
+            <div>
+                @Html.LabelFor(x => x.Profile)
+                @Html.DropDownListFor(x => x.Profile.Value, Model.Profiles)
+            </div>
+        }
+        else
+        {
+            <div>
+                @Html.LabelFor(m => m.UserName)
+                @Html.TextBoxFor(m => m.UserName)
+                @Html.ValidationMessageFor(m => m.UserName)
+            </div>
                 
-        <div>
-            @Html.LabelFor(m => m.Password)
-            @Html.PasswordFor(m => m.Password)
-            @Html.ValidationMessageFor(m => m.Password)
-        </div>
+            <div>
+                @Html.LabelFor(m => m.Password)
+                @Html.PasswordFor(m => m.Password)
+                @Html.ValidationMessageFor(m => m.Password)
+            </div>
                 
+            <div>
+                @Html.LabelFor(m => m.EnableSSO)
+                @Html.CheckBoxFor(m => m.EnableSSO)
+            </div>
+         
+        }
+
         <div>
-            @Html.LabelFor(m => m.EnableSSO)
-            @Html.CheckBoxFor(m => m.EnableSSO)
+            @Html.LabelFor(x => x.Language)
+            @Html.DropDownListFor(x => x.Language.Value, Model.Languages)
         </div>
                 
         <div class="buttons">

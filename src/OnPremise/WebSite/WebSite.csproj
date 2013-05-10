@@ -1169,6 +1169,8 @@
     <Content Include="Areas\Admin\Views\OAuthRefreshToken\Index.cshtml" />
     <Content Include="Areas\Admin\Views\User\ChangePassword.cshtml" />
     <Content Include="Areas\Admin\Views\Protocol\ADFSIntegration.cshtml" />
+    <Content Include="Configuration\sagrada.config" />
+    <None Include="Properties\PublishProfiles\STSProduction.pubxml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
@@ -1243,6 +1245,10 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Sagrada.IdentityServer.Module\Sagrada.IdentityServer.Module.csproj">
+      <Project>{915e6bc4-9719-4ae4-ab5b-ddf318acbab3}</Project>
+      <Name>Sagrada.IdentityServer.Module</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Libraries\Thinktecture.IdentityServer.Core.Repositories\Thinktecture.IdentityServer.Core.Repositories.csproj">
       <Project>{9658f86f-3059-4731-9eb0-5f67a4ff1a8a}</Project>
       <Name>Thinktecture.IdentityServer.Core.Repositories</Name>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Sagrada.Web.Services.Identity" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Sagrada.Web.Services.Identity" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:1286/Services/Identity/IdentityUserService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfIdentityCompany">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="IdentityCompany" nillable="true" type="tns:IdentityCompany" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIdentityCompany" nillable="true" type="tns:ArrayOfIdentityCompany" />
+  <xs:complexType name="IdentityCompany">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IdentityCompany" nillable="true" type="tns:IdentityCompany" />
+  <xs:complexType name="ArrayOfIdentityProfile">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="IdentityProfile" nillable="true" type="tns:IdentityProfile" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIdentityProfile" nillable="true" type="tns:ArrayOfIdentityProfile" />
+  <xs:complexType name="IdentityProfile">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="IsDefault" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IdentityProfile" nillable="true" type="tns:IdentityProfile" />
+  <xs:complexType name="ArrayOfIdentityLanguage">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="IdentityLanguage" nillable="true" type="tns:IdentityLanguage" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIdentityLanguage" nillable="true" type="tns:ArrayOfIdentityLanguage" />
+  <xs:complexType name="IdentityLanguage">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DisplayName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IdentityLanguage" nillable="true" type="tns:IdentityLanguage" />
+</xs:schema>
