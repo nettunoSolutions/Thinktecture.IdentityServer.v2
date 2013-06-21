@@ -15,7 +15,7 @@ namespace Sagrada.IdentityServer.Module.Repositories
                                                 "	PR.PartyRoleProfileName" +
                                                 "  FROM PartyRoleProfiles PR  INNER JOIN" +
                                                 "		SagradaUsers SU ON PR.id_SagradaUser = SU.ID " +
-                                                "WHERE SU.Username = @P1";
+                                                "WHERE SU.Username = @P1 AND SU.IsEnabled = 1";
 
         private const string SQL_GET_ROLES = "SELECT " +
                                              "   P.ProfileName " +
