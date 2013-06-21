@@ -57,11 +57,6 @@
     <Compile Include="Repositories\SagradaProviderClaimsRepository.cs" />
     <Compile Include="Repositories\SagradaProviderUserRepository.cs" />
     <Compile Include="SagradaExportProvider.cs" />
-    <Compile Include="Service References\SagradaService\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\src\Libraries\Thinktecture.IdentityServer.Core.Repositories\Thinktecture.IdentityServer.Core.Repositories.csproj">
@@ -74,52 +69,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />
-  <ItemGroup>
-    <WCFMetadata Include="Service References\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="app.config" />
-    <None Include="Service References\SagradaService\IdentityUserService.wsdl" />
-    <None Include="Service References\SagradaService\IdentityUserService.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\SagradaService\IdentityUserService1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\SagradaService\IdentityUserService2.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\SagradaService\IdentityUserService3.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\SagradaService\Sagrada.IdentityServer.Module.SagradaService.IdentityCompany.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\SagradaService\Sagrada.IdentityServer.Module.SagradaService.IdentityLanguage.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\SagradaService\Sagrada.IdentityServer.Module.SagradaService.IdentityProfile.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadataStorage Include="Service References\SagradaService\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\SagradaService\IdentityUserService.disco" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\SagradaService\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\SagradaService\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\SagradaService\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -9,8 +9,8 @@ namespace Sagrada.IdentityServer.Module
 {
     public interface ISagradaIdentityService
     {
-        IEnumerable<Tuple<Guid, string>> GetProfiles(string userName);        
-        IEnumerable<Tuple<Guid, string>> GetCompanies();
+        IEnumerable<Tuple<Guid, string>> GetProfiles(string userName);
+        IEnumerable<Tuple<byte, string>> GetCompanies();
         IEnumerable<CultureInfo> GetLanguages();
         string[] GetRoles(string userName);
     }
